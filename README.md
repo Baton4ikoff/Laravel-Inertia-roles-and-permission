@@ -18,12 +18,12 @@ OR
 <div v-if="$page.props.auth.hasRole.user">
 ```
 
-Read more in the file [HandleInertiaRequests.php](app\Http\Middleware\HandleInertiaRequests.php)
+Read more in the file [HandleInertiaRequests.php](https://github.com/Baton4ikoff/Laravel-Inertia-roles-and-permission/blob/master/app/Http/Middleware/HandleInertiaRequests.php)
 
 ### Installation
 
 ``` bash
-git clone
+git clone https://github.com/Baton4ikoff/Laravel-Inertia-roles-and-permission.git folder
 cd folder
 cp .env.example .env
 composer install
