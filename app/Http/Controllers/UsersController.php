@@ -88,7 +88,7 @@ class UsersController extends Controller
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, 'prohibited (not authorized)');
         $user->load('roles');
         return Inertia::render('Users/Show', [
-            'users' => $user,
+            'user' => $user,
         ]);
     }
 
