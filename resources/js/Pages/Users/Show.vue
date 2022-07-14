@@ -13,7 +13,7 @@
                 </template>
 
                 <template #description>
-                    Viewing detailed user information {{ users.name }}
+                    Viewing detailed user information {{ user.name }}
                 </template>
 
                 <template #content>
@@ -22,27 +22,27 @@
                         <div class="col-span-6 sm:col-span-4">
                             <jet-label value="Profile Picture" />
                             <div class="mt-2">
-                                <img :src="users.profile_photo_url" :alt="users.name" class="rounded-full h-20 w-20 object-cover">
+                                <img :src="user.profile_photo_url" :alt="user.name" class="rounded-full h-20 w-20 object-cover">
                             </div>
                         </div>
                         <!-- Name -->
                         <div class="col-span-6 sm:col-span-4">
                             <jet-label value="Name" />
                             <span class="block font-medium text-lg text-gray-700">
-                                {{ users.name }}
+                                {{ user.name }}
                             </span>
                         </div>
                         <!-- Email -->
                         <div class="col-span-6 sm:col-span-4">
                             <jet-label value="E-mail" />
                             <span class="block font-medium text-lg text-gray-700">
-                                {{ users.email }}
+                                {{ user.email }}
                             </span>
                         </div>
                         <!-- Role -->
                         <div class="col-span-6 sm:col-span-4">
                             <jet-label value="Role" />
-                            <span v-for="role in users.roles" :key="role.id" class="block font-medium text-lg text-gray-700">
+                            <span v-for="role in user.roles" :key="role.id" class="block font-medium text-lg text-gray-700">
                                 {{ role.title }}
                             </span>
                         </div>
@@ -54,7 +54,7 @@
                         <Link :href="route('users.index')" class="dark:text-white">
                             Go back to the table
                         </Link>
-                        <Link :href="route('users.edit', users.id)">
+                        <Link :href="route('users.edit', user.id)">
                             Edit
                         </Link>
                     </div>
@@ -79,6 +79,6 @@ export default {
         JetLabel,
         SectionContent,
     },
-    props: ['users'],
+    props: ['user'],
 }
 </script>
